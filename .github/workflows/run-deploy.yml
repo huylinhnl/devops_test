@@ -1,0 +1,17 @@
+name: Deploy
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Entvironment'
+        required: true
+        type: string
+
+jobs:
+  handle_devops_event:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Toon ontvangen input
+        run: |
+          echo "User Story ID: ${{ github.event.inputs.environment }}"
