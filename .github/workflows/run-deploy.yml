@@ -19,3 +19,4 @@ jobs:
       - name: Toon ontvangen input
         run: |
           echo "ChangeId: ${{ github.event.inputs.ChangeId }}"
+          echo "Entvironment: ${{ github.event.inputs.environment }}"
