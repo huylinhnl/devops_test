@@ -7,6 +7,10 @@ on:
         description: 'Entvironment'
         required: true
         type: string
+      changeid:
+        description: 'ChangeId'
+        required: true
+        type: string        
 
 jobs:
   handle_devops_event:
@@ -14,4 +18,4 @@ jobs:
     steps:
       - name: Toon ontvangen input
         run: |
-          echo "User Story ID: ${{ github.event.inputs.environment }}"
+          echo "ChangeId: ${{ github.event.inputs.ChangeId }}"
