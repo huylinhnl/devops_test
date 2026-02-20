@@ -1,4 +1,4 @@
-name: CreateRepo
+name: CreateRepo  ${{ github.event.inputs.reponame }}
 
 on:
   workflow_dispatch:
