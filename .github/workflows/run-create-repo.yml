@@ -14,4 +14,4 @@ jobs:
     steps:
       - name: Toon ontvangen input
         run: |
-          echo "User Story ID: ${{ github.event.inputs.reponame }}"
+          echo "Creatin repo: ${{ github.event.inputs.reponame }}"
