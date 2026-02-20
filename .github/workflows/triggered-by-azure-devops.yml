@@ -1,0 +1,23 @@
+name: Triggered by Azure DevOps
+
+on:
+  workflow_dispatch:
+    inputs:
+      user_story_id:
+        description: 'ID van de user story'
+        required: true
+        type: string
+      new_state:
+        description: 'Nieuwe status van de user story'
+        required: true
+        type: string
+
+jobs:
+  handle_devops_event:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Toon ontvangen input
+        run: |
+          echo "User Story ID: ${{ github.event.inputs.user_story_id }}"
+          echo "Nieuwe status: ${{ github.event.inputs.new_state }}"
+      # Voeg hier je eigen logica toe, zoals het aanroepen van scripts of andere acties
